@@ -1,0 +1,39 @@
+/my-booking-app
+├── /config
+│   ├── constants.js          # Common constants (transport types, payment status)
+│   ├── db.js                 # MongoDB connection configuration
+│   └── env.js                # Environment variables
+├── /controllers
+│   ├── busController.js      # Handles bus-related CRUD operations
+│   ├── trainController.js    # Handles train-related CRUD operations
+│   ├── flightController.js   # Handles flight-related CRUD operations
+│   ├── bookingController.js  # Handles booking-related operations
+│   ├── paymentController.js  # Handles payment-related operations
+│   └── userController.js     # Handles user-related operations (authentication)
+├── /middleware
+│   ├── authMiddleware.js     # Authentication middleware (JWT)
+│   ├── adminMiddleware.js    # Admin-specific permissions
+│   └── errorMiddleware.js    # Global error handling
+├── /models
+│   ├── Transport.js          # Common model for buses, trains, flights
+│   ├── Bus.js                # Bus-specific model
+│   ├── Train.js              # Train-specific model
+│   ├── Flight.js             # Flight-specific model
+│   ├── Booking.js            # Booking model
+│   ├── Payment.js            # Payment transaction model
+│   └── User.js               # User model
+├── /routes
+│   ├── busRoutes.js          # Routes for bus bookings
+│   ├── trainRoutes.js        # Routes for train bookings
+│   ├── flightRoutes.js       # Routes for flight bookings
+│   ├── bookingRoutes.js      # Routes for bookings
+│   ├── paymentRoutes.js      # Routes for payments
+│   └── userRoutes.js         # Routes for user authentication
+├── /utils
+│   ├── validate.js           # Validation functions (input checks)
+│   ├── generateToken.js      # JWT token generation
+│   └── sendEmail.js          # Email sending functionality (e.g., booking confirmation)
+├── .env                      # Environment variables (DB URI, JWT secret, etc.)
+├── app.js                    # Main Express app configuration
+├── server.js                 # Starts the server
+└── package.json              # Project dependencies
